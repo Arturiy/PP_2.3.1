@@ -41,8 +41,8 @@ public class User {
         this.role = role;
     }
 
-   public User() {
-   }
+    public User() {
+    }
 
     public int getId() {
         return id;
@@ -86,12 +86,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", yearOfBirth=" + yearOfBirth +
-                ", role=" + role +
-                '}';
+        return "User{" + "id=" + id + ", name='" + name + '\'' + ", surname='" + surname + '\'' + ", yearOfBirth=" + yearOfBirth + ", role=" + role + '}';
     }
 }

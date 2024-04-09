@@ -1,6 +1,5 @@
 package web.service;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -8,7 +7,6 @@ import web.dao.UserDAO;
 import web.model.User;
 
 import java.util.List;
-
 
 @Component
 @Transactional(readOnly = true)
@@ -37,7 +35,6 @@ public class UserServiceImplementation implements UserService {
     @Transactional
     public void update(int id, User updatedUser) {
         updatedUser.setId(id);
-        //userRepository.save(updatedUser);}
         userDAO.update(updatedUser);
     }
 
@@ -47,6 +44,6 @@ public class UserServiceImplementation implements UserService {
     }
 
     public List<User> getUserByFullName(String name, String surname) {
-       return userDAO.getUserByFullName(name, surname);
+        return userDAO.getUserByFullName(name, surname);
     }
 }
