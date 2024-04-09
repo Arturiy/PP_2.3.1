@@ -2,15 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title>Show</title>
 </head>
 <body>
-<p th:text="${user.getName() + ', '  + user.getSurname()+ ', ' + user.getYearOfBirth()+ ', ' + user.getRole()}">VALUE</p>
-<form th:method="GET" th:action="@{/user/{id}/edit(id=${user.getId()})}">
+<p th:text="${user.getName() + ', '  + user.getSurname()+ ', ' + user.getYearOfBirth()+ ', ' + user.getRole()}">
+    VALUE</p>
+<form th:action="@{/user/{id}/edit(id=${user.getId()})}" th:method="GET">
     <input type="submit" value="Редактировать"/>
 </form>
-<form th:method="post" th:action="@{/user/{id}/delete(id=${user.getId()})}">
+<form th:action="@{/user/{id}/delete(id=${user.getId()})}" th:method="post">
     <input type="submit" value="Удалить"/>
 </form>
 </body>
