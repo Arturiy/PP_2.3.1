@@ -12,7 +12,6 @@ import web.util.UserValidator;
 
 import javax.validation.Valid;
 
-
 @Controller
 @RequestMapping("/user")
 public class UserController {

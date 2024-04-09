@@ -86,7 +86,6 @@ public class SpringConfig implements WebMvcConfigurer {
         return properties;
     }
 
-
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
