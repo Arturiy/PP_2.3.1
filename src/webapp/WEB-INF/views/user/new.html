@@ -23,7 +23,7 @@
 
     <label for="role">Укажите роль пользователя</label>
     <select th:field="*{role}" id="role">
-        <option th:each="role : ${roles}"
+        <option th:each="role : ${T(web.model.Role).values()}"
                 th:value="${role}"
                 th:text="${role}">
         </option>

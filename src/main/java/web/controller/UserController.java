@@ -55,7 +55,6 @@ public class UserController {
     @GetMapping("/{id}/edit")
     public String edit(Model model, @PathVariable("id") int id) {
         model.addAttribute("user", userServiceImplementation.findById(id));
-        model.addAttribute("roles", Role.values());
         return "user/edit";
     }
 
